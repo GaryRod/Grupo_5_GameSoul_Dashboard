@@ -1,9 +1,9 @@
 import React from 'react';
 import image from '../assets/images/logo-DH.png';
 import ContentWrapper from './ContentWrapper';
-import GenresInDb from './GenresInDb';
+import GamesInDb from './GamesInDb';
 import LastMovieInDb from './LastMovieInDb';
-import ContentRowMovies from './ContentRowMovies';
+import ContentRowMovies from './ContentRowMovies.jsx';
 import NotFound from './NotFound';
 import {Link, Route, Switch} from 'react-router-dom';
 
@@ -84,7 +84,7 @@ function SideBar(){
                     <ContentWrapper />
                 </Route>
                 <Route path="/GenresInDb">
-                    <GenresInDb />
+                    <GamesInDb />
                 </Route>
                 <Route path="/LastMovieInDb">
                     <LastMovieInDb />

@@ -1,50 +1,99 @@
-import React from 'react';
+import React,{useEffect, useState} from 'react';
 import SmallCard from './SmallCard';
+import {UseFetch} from '../assets/hooks/UseFetch'
+import { createFactory } from 'react/cjs/react.production.min';
 
-/*  Cada set de datos es un objeto literal */
+              /*  Cada set de datos es un objeto literal */
 
 /* <!-- Movies in DB --> */
 
-let moviesInDB = {
-    title: 'Movies in Data Base',
-    color: 'primary', 
-    cuantity: 21,
-    icon: 'fa-clipboard-list'
-}
+let gamesInDB = {
+  title: 'Games in Data Base',
+  color: 'primary', 
+  cuantity: ``,
+  icon: 'fa-clipboard-list'
 
+}
 /* <!-- Total awards --> */
 
 let totalAwards = {
-    title:' Total awards', 
-    color:'success', 
-    cuantity: '79',
-    icon:'fa-award'
+  title:' Total awards', 
+  color:'success', 
+  cuantity: '79',
+  icon:'fa-award'
 }
 
 /* <!-- Actors quantity --> */
 
-let actorsQuantity = {
-    title:'Actors quantity' ,
-    color:'warning',
-    cuantity:'49',
-    icon:'fa-user-check'
+let usersQuantity = {
+  title:'Users quantity' ,
+  color:'warning',
+  cuantity:``,
+  icon:'fa-user-check'
 }
 
-let cartProps = [moviesInDB, totalAwards, actorsQuantity];
+let cartProps = [gamesInDB, totalAwards, usersQuantity];
+
+
+
+
+
+
+
+
 
 function ContentRowMovies(){
-    return (
+    const urlProducts = `/api/products/`
+    const[products,setProducts] = useState(null)
     
+    
+    useEffect(()=>{
+      fetchApiProducts()
+    },[urlProducts])
+  
+    const fetchApiProducts = async()=>{
+      const response = await fetch(urlProducts)
+      const products = await response.json()
+      setProducts(products)
+      console.log(products)
+    }
+
+    const urlUsers = `/api/users/`
+    const[users,setUsers] = useState(null)
+    
+    
+    useEffect(()=>{
+      fetchApiUsers()
+    },[urlUsers])
+  
+    const fetchApiUsers = async()=>{
+      const response = await fetch(urlUsers)
+      const users = await response.json()
+      setUsers(users)
+      console.log(users)
+    }
+
+
+
+
+
+    return (
+      <React.Fragment>
+        
+        
+          {   products && users ? (  
+            
+            
         <div className="row">
-            
-            {cartProps.map( (movie, i) => {
-
-                return <SmallCard {...movie} key={i}/>
-            
-            })}
-
-        </div>
-    )
+          {cartProps[0].cuantity = products.meta.count}
+          {cartProps[2].cuantity = users.meta.count}
+        
+          {cartProps.map((movie, i) => {
+            return <SmallCard {...movie} key={i}  />;
+          })}
+        </div>):null}
+      </React.Fragment>
+    );
 }
 
 export default ContentRowMovies;
