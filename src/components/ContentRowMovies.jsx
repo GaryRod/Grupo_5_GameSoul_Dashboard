@@ -1,7 +1,6 @@
 import React,{useEffect, useState} from 'react';
 import SmallCard from './SmallCard';
-import {UseFetch} from '../assets/hooks/UseFetch'
-import { createFactory } from 'react/cjs/react.production.min';
+
 
               /*  Cada set de datos es un objeto literal */
 
@@ -85,8 +84,11 @@ function ContentRowMovies(){
             
             
         <div className="row">
+          <template>
           {cartProps[0].cuantity = products.meta.count}
           {cartProps[2].cuantity = users.meta.count}
+          </template>
+          
         
           {cartProps.map((movie, i) => {
             return <SmallCard {...movie} key={i}  />;

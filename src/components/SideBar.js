@@ -1,11 +1,11 @@
 import React from 'react';
-import image from '../assets/images/logo-DH.png';
+import image from '../assets/images/Game-Soul.png';
 import ContentWrapper from './ContentWrapper';
 import GamesInDb from './GamesInDb';
 import LastMovieInDb from './LastMovieInDb';
-import ContentRowMovies from './ContentRowMovies.jsx';
 import NotFound from './NotFound';
 import {Link, Route, Switch} from 'react-router-dom';
+import ContentRowMovies from './ContentRowMovies.jsx';
 
 function SideBar(){
     return(
@@ -16,7 +16,7 @@ function SideBar(){
                 {/*<!-- Sidebar - Brand -->*/}
                 <a className="sidebar-brand d-flex align-items-center justify-content-center" href="/">
                     <div className="sidebar-brand-icon">
-                        <img className="w-100" src={image} alt="Digital House"/>
+                        <img className="w-100" src={image} alt="Game Soul"/>
                     </div>
                 </a>
 
@@ -90,7 +90,7 @@ function SideBar(){
                     <LastMovieInDb />
                 </Route>
                 <Route path="/ContentRowMovies">
-                    <ContentRowMovies />
+                    <ContentRowMovies/>
                 </Route>
                 <Route component={NotFound} />
             </Switch>
