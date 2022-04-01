@@ -1,5 +1,6 @@
 import React,{useEffect, useState} from 'react'
 import Games from './Games'
+
 const GamesInDb = () => {
 
   const url = `/api/products`
@@ -13,13 +14,13 @@ const GamesInDb = () => {
     const response = await fetch(url)
     const e = await response.json()
     setData(e)
-    console.log(e.meta)
+    console.log(e.meta.countByGenres)
   }
 
   return (
     <React.Fragment>
       { data ?(
-       
+               
        <div className="col-lg-6 mb-4">						
        <div className="card shadow mb-4">
            <div className="card-header py-3">
@@ -27,11 +28,12 @@ const GamesInDb = () => {
            </div>
            <div className="card-body">
                <div className="row">
+                
                    {
+                      <Games data={data.meta.countByGenres} />
+                    }
                        
-                      <Games  data={data} />
-                       
-                   }
+                   
                </div>
            </div>
        </div>
