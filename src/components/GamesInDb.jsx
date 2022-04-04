@@ -57,8 +57,6 @@ let categorias =[]
                         
                     })
                     }
-                       
-                   
                </div>
            </div>
        </div>

@@ -6,17 +6,18 @@ import LastMovieInDb from './LastMovieInDb';
 import NotFound from './NotFound';
 import {Link, Route, Switch} from 'react-router-dom';
 import ContentRowMovies from './ContentRowMovies.jsx';
+import '../assets/css/sideBar.css'
 
 function SideBar(){
     return(
         <React.Fragment>
             {/*<!-- Sidebar -->*/}
-            <ul className="navbar-nav bg-gradient-secondary sidebar sidebar-dark accordion" id="accordionSidebar">
+            <ul className="navbar-nav sidebar sidebar-dark accordion colorSideBar" id="accordionSidebar">
 
                 {/*<!-- Sidebar - Brand -->*/}
                 <a className="sidebar-brand d-flex align-items-center justify-content-center" href="/">
                     <div className="sidebar-brand-icon">
-                        <img className="w-100" src={image} alt="Game Soul"/>
+                        <img className="imagen" src={image} alt="Game Soul"/>
                     </div>
                 </a>
 
@@ -27,7 +28,7 @@ function SideBar(){
                 <li className="nav-item active">
                     <Link className="nav-link" to="/">
                         <i className="fas fa-fw fa-tachometer-alt"></i>
-                        <span>Dashboard - DH movies</span></Link>
+                        <span>Dashboard GameSoul</span></Link>
                 </li>
 
                 {/*<!-- Divider -->*/}
