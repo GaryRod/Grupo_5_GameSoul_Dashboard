@@ -7,31 +7,31 @@ import SmallCard from './SmallCard';
 /* <!-- Movies in DB --> */
 
 let gamesInDB = {
-  title: 'Games in Data Base',
+  title: 'Total de juegos',
   color: 'primary', 
   cuantity: ``,
-  icon: 'fa-clipboard-list'
+  icon: 'fa-gamepad'
 
 }
 /* <!-- Total awards --> */
 
-let totalAwards = {
-  title:' Total awards', 
+let totalCategorys = {
+  title:' Total de generos', 
   color:'success', 
   cuantity: '79',
-  icon:'fa-award'
+  icon:'fa-paperclip'
 }
 
 /* <!-- Actors quantity --> */
 
 let usersQuantity = {
-  title:'Users quantity' ,
+  title:'Total de usuarios' ,
   color:'warning',
   cuantity:``,
   icon:'fa-user-check'
 }
 
-let cartProps = [gamesInDB, totalAwards, usersQuantity];
+let cartProps = [gamesInDB, totalCategorys, usersQuantity];
 
 
 
@@ -87,6 +87,7 @@ function ContentRowMovies(){
           <template>
           {cartProps[0].cuantity = products.meta.count}
           {cartProps[2].cuantity = users.meta.count}
+          {cartProps[1].cuantity = products.meta.countByGenres.length}
           </template>
           
         
