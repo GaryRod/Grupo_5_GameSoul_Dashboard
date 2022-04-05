@@ -1,20 +1,16 @@
-import React from 'react';
-import LastMovieInDb from './LastMovieInDb';
-import GamesInDb from './GamesInDb';
+import React from "react";
+import LastGameInDb from "./LastGameInDb";
+import GamesInDb from "./GamesInDb";
 
-function ContentRowCenter(){
-    return (
-        <div className="row">
-            
-            {/*<!-- Last Movie in DB -->*/}
-            <LastMovieInDb />
-            {/*<!-- End content row last movie in Data Base -->*/}
-
-            {/*<!-- Genres in DB -->*/}
-            <GamesInDb />
-
-        </div>
-    )
+function ContentRowCenter() {
+  return (
+    <React.Fragment>
+      <div className="row">
+        <LastGameInDb />
+        <GamesInDb />
+      </div>
+    </React.Fragment>
+  );
 }
 
 export default ContentRowCenter;
