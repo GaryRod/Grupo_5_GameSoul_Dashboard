@@ -25,7 +25,7 @@ const GamesInDb = () => {
         <div className="card shadow mb-4">
           <div className="card-header py-3">
             <h6 className="m-0 font-weight-bold text-gray-800">
-              Cantidad de juegos por genero
+              Cantidad de juegos por género
             </h6>
           </div>
           <div className="card-body">

@@ -9,7 +9,7 @@ let gamesInDB = {
 }
 
 let totalCategorys = {
-  title:' Total de generos', 
+  title:' Total de géneros', 
   color:'success', 
   quantity: '79',
   icon:'fa-paperclip'

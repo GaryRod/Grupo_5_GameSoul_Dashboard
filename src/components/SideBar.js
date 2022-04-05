@@ -47,7 +47,7 @@ function SideBar() {
         <li className="nav-item">
           <Link className="nav-link" to="/GamesInDb">
             <i className="fas fa-fw fa-folder"></i>
-            <span>Juegos por genero</span>
+            <span>Juegos por género</span>
           </Link>
         </li>
 
@@ -55,7 +55,7 @@ function SideBar() {
         <li className="nav-item">
           <Link className="nav-link" to="/LastGameInDb">
             <i className="fas fa-fw fa-chart-area"></i>
-            <span>Ultimo juego agregado</span>
+            <span>Último juego agregado</span>
           </Link>
         </li>
 
